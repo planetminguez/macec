@@ -1,4 +1,4 @@
-# macsec — Mach-O File CheckSec: Just like checksec but for macOS !!!
+Mach-O File CheckSec: Just like checksec but for macOS💯!
 
 macsec is a lightweight CLI tool that analyzes Mach-O binaries on macOS and reports common security features and metadata. It parses Mach-O headers directly and also uses system tools to detect protections such as stack canaries and code signing. It can also determine how a binary was linked (dynamic vs. static) and, for universal (FAT) binaries, reports linkage per-architecture.
 
