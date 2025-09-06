@@ -1,0 +1,14 @@
+# macOS artifacts
+.DS_Store
+
+# Build outputs
+macsec
+*.o
+*.out
+*.dylib
+*.a
+*.dSYM/
+
+# Other
+*.swp
+

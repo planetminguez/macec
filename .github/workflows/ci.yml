@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: make
+
+      - name: Smoke tests
+        run: |
+          set -euo pipefail
+          ./macsec /bin/ls | sed -n '1,40p'
+          ./macsec "$(command -v ls)" | sed -n '1,20p'
+
+      - name: Upload macsec binary artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: macsec-${{ github.sha }}-macos
+          path: macsec
+
