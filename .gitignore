@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+*.dSYM/
+
+# Build artifacts
+macsec
+src/*.o
+*.o
+*.a
+*.so
+*.dylib
+/build/
+/dist/
+
+# Logs
+*.log
+
+# Editors/IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Tags/ctags
+.tags
+TAGS
